@@ -2,20 +2,21 @@
   <div :class="['navbar__right', navbarRightClass]">
     <!-- 桌面端显示 -->
     <template v-if="isDesktop">
-      <!-- 搜索 -->
+      <!-- 搜索
       <MenuSearch />
-
-      <!-- 全屏 -->
+       -->
+      <!-- 全屏
       <Fullscreen />
-
-      <!-- 布局大小 -->
+       -->
+      <!-- 布局大小
       <SizeSelect />
-
-      <!-- 语言选择 -->
+       -->
+      <!-- 语言选择
       <LangSelect />
-
-      <!-- 通知下拉 -->
+       -->
+      <!-- 通知下拉
       <NoticeDropdown />
+       -->
     </template>
 
     <!-- 用户头像（个人中心、注销登录等） -->
@@ -23,6 +24,7 @@
       <div class="user-profile">
         <img class="user-profile__avatar" :src="userStore.userInfo.avatar" />
         <span class="user-profile__name">{{ userStore.userInfo.username }}</span>
+        <el-icon><CaretBottom /></el-icon>
       </div>
       <template #dropdown>
         <el-dropdown-menu>
