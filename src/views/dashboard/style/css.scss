@@ -1,0 +1,46 @@
+  .regional_distribution{
+   
+  }
+  .scroll-container {
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .scroll-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 6px; /* 给滚动条腾点空间 */
+    padding-bottom: 30px;
+  }
+
+  /* 滚动条样式 */
+  .scroll-wrap::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .scroll-wrap::-webkit-scrollbar-thumb {
+    background-color: rgba(110, 124, 229, 0.6);
+    border-radius: 4px;
+  }
+
+  .scroll-wrap::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  /* 底部渐变遮罩 */
+  .gradient-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+    pointer-events: none; /* 不遮挡点击和滚动 */
+  }
+
+  .bottomRegional{
+    height:280px;margin:20px 20px 0 10px;display: flex;background: #FFFFFF; 
+  }

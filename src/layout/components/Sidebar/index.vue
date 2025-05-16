@@ -12,8 +12,10 @@
       <SidebarLogo v-if="sidebarLogo" :collapse="isSidebarCollapsed" />
       <el-scrollbar>
         <SidebarMenu :data="permissionStore.routes" base-path="" />
+        <SidebarBottom />
       </el-scrollbar>
 
+        
       <!-- 顶部导航 -->
       <NavbarRight v-if="layout == LayoutMode.TOP" />
     </template>
@@ -41,5 +43,8 @@ const isSidebarCollapsed = computed(() => !appStore.sidebar.opened);
   .el-scrollbar {
     height: calc(100vh - $navbar-height);
   }
+}
+::v-deep .el-scrollbar__view{
+  display: flex;flex-direction: column;justify-content: space-between;height: 100%;
 }
 </style>

@@ -9,7 +9,7 @@ export const useSettingsStore = defineStore("setting", () => {
   // 基本设置
   const settingsVisible = ref(false);
   // 标签视图
-  const tagsView = useStorage<boolean>("tagsView", defaultSettings.tagsView);
+  const tagsView = false;//强制关闭//useStorage<boolean>("tagsView", defaultSettings.tagsView);
   // 侧边栏 Logo
   const sidebarLogo = useStorage<boolean>("sidebarLogo", defaultSettings.sidebarLogo);
   // 侧边栏配色方案 (经典蓝/极简白)

@@ -53,8 +53,8 @@ const isCapsLock = ref(false);
 const captchaBase64 = ref();
 
 const loginFormData = ref<LoginFormData>({
-  username: "",
-  password: "",
+  username: "admin",
+  password: "123456",
   captchaKey: "",
   captchaCode: "",
   rememberMe: false,

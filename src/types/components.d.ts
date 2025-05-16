@@ -88,6 +88,7 @@ declare module "vue" {
     SidebarMenuItem: (typeof import("./../layout/components/Sidebar/components/SidebarMenuItem.vue"))["default"];
     SidebarMenuItemTitle: (typeof import("./../layout/components/Sidebar/components/SidebarMenuItemTitle.vue"))["default"];
     SidebarMixTopMenu: (typeof import("./../layout/components/Sidebar/components/SidebarMixTopMenu.vue"))["default"];
+    SidebarBottom: (typeof import("./../layout/components/Sidebar/components/SidebarBottom.vue"))["default"];
     SingleImageUpload: (typeof import("./../components/Upload/SingleImageUpload.vue"))["default"];
     SizeSelect: (typeof import("./../components/SizeSelect/index.vue"))["default"];
     TableSelect: (typeof import("./../components/TableSelect/index.vue"))["default"];
