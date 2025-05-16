@@ -1,5 +1,5 @@
 <template>
-  <div class="contain">
+  <div class="LeftLbR">
     <div style="color:#333333;font-size:20px;">
       用户做题科目占比
     </div>
@@ -79,5 +79,7 @@ myChart.setOption(option)
 </script>
 
 <style lang="scss" scoped>
-
+  .LeftLbR{
+  
+  }
 </style>

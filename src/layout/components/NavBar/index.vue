@@ -31,7 +31,7 @@ function toggleSideBar() {
   justify-content: space-between;
   height: $navbar-height;
   background: var(--el-bg-color);
-
+  border-bottom: 1px solid #f5f8fd;
   &__left {
     display: flex;
     align-items: center;

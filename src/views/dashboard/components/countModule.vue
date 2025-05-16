@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="wrapCount">
         <div style="width:100%;height:210px;display:flex;    padding: 10px;">
 	        <div class="onlineDevice">
 	          <div style="margin: 10px; display: flex;flex-direction: column;">
@@ -48,7 +48,7 @@
 </script>
 
 <style scoped lang="scss">
-	.container{
+	.wrapCount{
 		height: 210px;
 		display: flex;
 		flex-direction: row;
@@ -57,10 +57,9 @@
 		color:#FFFFFF;
 	}
 
-	.container .onlineDevice{
+	.wrapCount .onlineDevice{
 		background:#2B66EC;
 		display: flex;
-		flex: 1;
 		align-items: center;
 		justify-content: space-between;
 		border-radius: 20px;
@@ -69,7 +68,7 @@
 		height: 100%;
 		margin: 10px;
 	}
-	.container .activateToday{
+	.wrapCount .activateToday{
 		background:#35CF96;
 		display: flex;
 		align-items: center;
@@ -80,7 +79,7 @@
 		height: 100%;
 		margin: 10px;
 	}
-	.container .total{
+	.wrapCount .total{
 		background: linear-gradient( 134deg, #FEC637 0%, #FFF153 100%);
 		display: flex;
 		align-items: center;

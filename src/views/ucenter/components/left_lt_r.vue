@@ -1,5 +1,5 @@
 <template>
-  <div class="contain">
+  <div class="LeftLtR">
     <div style="color:#333333;font-size:20px;">
       用户批改记录
     </div>
@@ -44,7 +44,7 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-   .contain{
+   .LeftLtR{
     position: relative;
   }
    /* 滚动条样式 */

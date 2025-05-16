@@ -1,5 +1,5 @@
 <template>
-  <div class="contain">
+  <div class="LeftLbL">
     <div style="color:#333333;font-size:20px;">
       用户使用信息
     </div>
@@ -38,7 +38,7 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-  .contain{
+  .LeftLbL{
 
   }
 </style>

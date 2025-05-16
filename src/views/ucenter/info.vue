@@ -5,7 +5,7 @@
     <div style="background:#fff;height:324px;width:100%;border-radius: 20px;padding:20px;">
       <Top/>
     </div>
-    <div class="container">
+    <div class="wrapUcenter">
       <div class="left">
         <div class="left_l">
           <div class="left_lt">
@@ -43,7 +43,7 @@ import Top from "./components/top.vue";
 
 </script>
 <style scoped>
-.container {
+.wrapUcenter {
   display: flex;
   width: 100%;
   height: 422px; /* 固定容器高度 */
