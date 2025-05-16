@@ -1,6 +1,6 @@
 <template>
   <div
-    style="display:flex;flex-direction:column;justify-content:center;align-items:center;margin:20px;margin-bottom: 100px;"
+    style="display:flex;flex-direction:column;justify-content:center;align-items:center;margin:24px;margin-bottom: 100px;"
   >
     <div style="background:#fff;height:324px;width:100%;border-radius: 20px;padding:20px;">
       <Top/>

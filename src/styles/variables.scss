@@ -22,6 +22,18 @@
   )
 );
 
+
+
+//分页圆角样式
+.round-pagination ::v-deep .el-pager li,
+.round-pagination ::v-deep .el-pagination button {
+  border-radius: 50% !important; /* 圆形 */
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0;
+  text-align: center;
+}
 /** 全局SCSS变量 */
 
 :root {

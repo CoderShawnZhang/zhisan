@@ -51,13 +51,16 @@
         <el-table-column label="执行时间(ms)" prop="executionTime" width="150" />
       </el-table>
 
-      <pagination
-        v-if="total > 0"
-        v-model:total="total"
-        v-model:page="queryParams.pageNum"
-        v-model:limit="queryParams.pageSize"
-        @pagination="handleQuery"
-      />
+      <div style="width:100%;display: flex;justify-content: center;">
+        <pagination
+          v-if="total > 0"
+          v-model:total="total"
+          v-model:page="queryParams.pageNum"
+          v-model:limit="queryParams.pageSize"
+          class="round-pagination"
+          @pagination="handleQuery"
+        />
+      </div>
     </el-card>
   </div>
 </template>

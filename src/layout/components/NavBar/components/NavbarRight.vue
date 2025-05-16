@@ -14,30 +14,51 @@
       <!-- 语言选择
       <LangSelect />
        -->
-      <!-- 通知下拉-->
+      <!-- 通知下拉
       <NoticeDropdown />
-       
+      -->
     </template>
 
     <!-- 用户头像（个人中心、注销登录等） -->
-    <el-dropdown trigger="click">
-      <div class="user-profile">
-        <img class="user-profile__avatar" :src="userStore.userInfo.avatar" />
-        <span class="user-profile__name">{{ userStore.userInfo.username }}</span>
-        <el-icon><CaretBottom /></el-icon>
-      </div>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item @click="handleProfileClick">
-            {{ t("navbar.profile") }}
-          </el-dropdown-item>
-          <el-dropdown-item divided @click="logout">
-            {{ t("navbar.logout") }}
-          </el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
+    <div style="margin-right:72px;">
+      <el-popover
+        placement="bottom-end"
+        :width="256"
+        :height="125"
+        :show-arrow="false"
+        popper-class="custom-popover"
+      >
+         <template #default>
+          <div style="height:125px;display: flex;flex-direction: column;justify-content: space-between;">
+              <div style="display:flex;margin-left:8px;align-items: center;margin-top:17px;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; overflow: hidden;margin-right:16px;">
+                  <img
+                    src="https://img01.sogoucdn.com/v2/thumb/retype_exclude_gif/ext/auto/q/80/crop/xy/ai/t/0/w/562/h/752?appid=122&url=https://img02.sogoucdn.com/app/a/100520020/928e6b29b3366e23b846471fd8ef16fe"
+                    style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+               
+                <div style="display:flex;flex-direction:column">
+                  <span style="color:#333333;font-size:20px;font-weight:400;">曹阿满</span>
+                  <span style="color:#333333;font-size:14px;font-weight:400;">账号：32559915</span>
+                </div>
+              </div>
+              <div style="font-size:16px;display: flex;width: 100%;justify-content: space-around;">
+                <span style="color:#FD6466;">退出登录</span>
+                <div style="width:0;height:16px;border: 1px solid #999999;"></div>
+                <span>切换账号</span>
+              </div>
+          </div>
+        </template>
 
+        <template #reference>
+          <div class="user-profile">
+            <img class="user-profile__avatar" :src="userStore.userInfo.avatar" style="margin-right:15px;"/>
+            <span class="user-profile__name">{{ userStore.userInfo.username }}</span>
+            <el-icon><CaretBottom /></el-icon>
+          </div>
+        </template>
+      </el-popover>
+    </div>
     <!-- 设置面板 -->
     <div v-if="defaultSettings.showSettings" @click="settingStore.settingsVisible = true">
       <div class="i-svg:setting" />
@@ -51,6 +72,7 @@ import { DeviceEnum } from "@/enums/settings/device.enum";
 import { useAppStore, useSettingsStore, useUserStore, useTagsViewStore } from "@/store";
 
 import { SidebarColor, ThemeMode } from "@/enums/settings/theme.enum";
+
 
 const appStore = useAppStore();
 const settingStore = useSettingsStore();
@@ -155,5 +177,17 @@ function logout() {
 
 .dark .navbar__right > *:hover {
   color: #ccc;
+}
+
+/* 如果是全局 style，直接这样写 */
+.custom-popover {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+/* 如果你的 style 是 scoped，需要这样写： */
+:deep(.custom-popover) {
+  border-radius: 20px !important;
+  overflow: hidden !important;
 }
 </style>

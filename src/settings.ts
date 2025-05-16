@@ -11,7 +11,7 @@ const defaultSettings: AppSettings = {
   // 系统版本
   version: pkg.version,
   // 是否显示设置
-  showSettings: true,
+  showSettings: false,
   // 是否显示标签视图
   tagsView: false,
   // 是否显示侧边栏Logo
@@ -29,7 +29,7 @@ const defaultSettings: AppSettings = {
   // 是否开启水印
   watermarkEnabled: false,
   // 水印内容
-  watermarkContent: pkg.name,
+  watermarkContent: "seerTeach",
   // 侧边栏配色方案
   sidebarColorScheme: SidebarColor.MINIMAL_WHITE,
 };

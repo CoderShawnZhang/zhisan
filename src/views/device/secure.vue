@@ -1,10 +1,13 @@
 <template>
-  <div class="contain">
+  <div>
     <span>安全管理</span>
+    <SelectProvince/>
   </div>
 </template>
 
 <script lang="ts" setup>
+
+import SelectProvince from "@/components/SelectProvince/index.vue"
 defineProps({
   collapse: {
     type: Boolean,
@@ -14,14 +17,5 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-  .contain{
-    font-size:12;
-    color:#999999;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:39px;
-  }
+
 </style>

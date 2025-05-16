@@ -10,7 +10,7 @@ export default defineMock([
         userId: 2,
         username: "admin",
         nickname: "系统管理员",
-        avatar: "https://foruda.gitee.com/images/1723603502796844527/03cdca2a_716974.gif",
+        avatar: "/src/assets/logo@2x.png",
         roles: ["ADMIN"],
         perms: [
           "sys:user:query",
