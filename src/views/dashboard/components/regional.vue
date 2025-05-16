@@ -1,7 +1,7 @@
 <template>
 	<div style="width: 100%;">
         <div style="background: rgb(245, 248, 253);">
-            <div style="width: 100%;display: flex;justify-content: space-between;    padding: 10px; background:#fff;    border-top-left-radius: 20px;border-top-right-radius: 20px;">
+            <div style="width: 100%;display: flex;justify-content: space-between;padding: 20px 10px 10px 20px; background:#fff;    border-top-left-radius: 20px;border-top-right-radius: 20px;">
               <div style="color:#333333;font-size:20px;display: flex;align-items: center;">
                 <span style="font-weight:800;color:#333333;">用户地区分布</span>
                 <span style="margin-left:20px;margin-right:12px;color:#6E7CE5;font-weight:800;">广东</span>
@@ -14,7 +14,7 @@
             </div>
           </div>
 
-          <div class="scroll-container" style="height:210px; overflow: hidden;">
+          <div class="scroll-container" style="height:210px; overflow: hidden;margin-left:10px;">
             <div class="scroll-wrap">
               <div v-for="item in cityList" style="   
                 font-size: 16px;
@@ -23,7 +23,7 @@
                 color: #6E7CE5; 
                 border: 1px solid #6E7CE5; 
                 width: auto; 
-                margin: 10px; 
+                margin: 6px 8px; 
                 margin-bottom: 13px;
                 border-radius: 30px;
                 padding: 0 12px;
