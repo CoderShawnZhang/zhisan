@@ -3,7 +3,7 @@
         <el-input v-model="input" class="custom-input" />
         <div class="searchBtn">搜索</div>
         <div style="height:40px;width:40px;background:#4A5BDE;border-radius:50px;position: absolute;right: -60px;    display: flex;justify-content: center;align-items: center;">
-          <el-image :src="searchMore" style="width:22px;height:21px;"/>
+          <el-image :src="searchMore" style="width:22px;height:21px;cursor: pointer;"/>
         </div>
       </div>
 </template>
@@ -36,6 +36,7 @@
     text-align: center;
     line-height: 40px;
     margin-right: -10px;
+    cursor: pointer;
   }
 
 

@@ -84,18 +84,19 @@
       <div style="height:249px;width:100%;display:flex;flex-direction:column;align-items: center;justify-content:center;">
         <div style="height:229px;width:100%;display:flex;flex-direction:column;align-items: center;justify-content: space-around;color:#fff;">
             <div style="display:flex;width:500px;justify-content:space-between;">
-              <span style="width:130px;height:40px;border-radius:20px;color:#fff;background:#4A5BDE;text-align:center;line-height:40px;">秀才</span>
-              <span style="width:130px;height:40px;border-radius:20px;color:#666666;background:#F1F1F1;text-align:center;line-height:40px;">举人</span>
-              <span style="width:130px;height:40px;border-radius:20px;color:#666666;background:#F1F1F1;text-align:center;line-height:40px;">榜眼</span>
+              <el-button @click="selectLevel(1)" class="levelItem" :class="{levelItemActive:curSelectedLevel==1}">秀才</el-button>
+              <el-button @click="selectLevel(2)" class="levelItem" :class="{levelItemActive:curSelectedLevel==2}">举人</el-button>
+              <el-button @click="selectLevel(3)" class="levelItem" :class="{levelItemActive:curSelectedLevel==3}">榜眼</el-button>
+
             </div>
              <div style="display:flex;width:320px;justify-content:space-between;">
-              <span style="width:130px;height:40px;border-radius:20px;color:#666666;background:#F1F1F1;text-align:center;line-height:40px;">探花</span>
-              <span style="width:130px;height:40px;border-radius:20px;color:#666666;background:#F1F1F1;text-align:center;line-height:40px;">状元</span>
+              <el-button @click="selectLevel(4)" class="levelItem" :class="{levelItemActive:curSelectedLevel==4}">探花</el-button>
+              <el-button @click="selectLevel(5)" class="levelItem" :class="{levelItemActive:curSelectedLevel==5}">状元</el-button>
             </div>
             <div style="color:#4A5BDE;display:flex;width:335px;justify-content:space-between;">
-              <span style="height:40px;width:40px;border:1px solid #4A5BDE;border-radius:20px;text-align:center;line-height:40px;">1星</span>
-              <span style="height:40px;width:40px;color:#666666;border-radius:20px;text-align:center;line-height:40px;">2星</span>
-              <span style="height:40px;width:40px;color:#666666;border-radius:20px;text-align:center;line-height:40px;">3星</span>
+              <el-button @click="selectStart(1)" class="levelStart" :class="{levelStartActive:curSelectedStart==1}" circle>1星</el-button>
+              <el-button @click="selectStart(2)" class="levelStart" :class="{levelStartActive:curSelectedStart==2}" circle>2星</el-button>
+              <el-button @click="selectStart(3)" class="levelStart" :class="{levelStartActive:curSelectedStart==3}" circle>3星</el-button>
             </div>
             <div style="display: flex;width: 100%;justify-content: center;margin-top:12px;">
               <div> <el-button style="width:372px;height: 40px;border-radius: 20px;background:#4A5BDE;color:#fff;">修改</el-button></div>
@@ -128,6 +129,16 @@ const dialogUpdateName = ref(false)//弹出修改姓名
 const dialogUpdateLevel = ref(false)//弹出修改段位
 const dialogUpdatePhone = ref(false)//弹出修改手机号
 
+const curSelectedLevel = ref(1)
+const curSelectedStart = ref(1)
+
+function selectLevel(level){
+  curSelectedLevel.value = level
+}
+function selectStart(start){
+  curSelectedStart.value = start
+}
+
 const input = ref("aaaa")
 defineProps({
   collapse: {
@@ -140,6 +151,8 @@ function popDialogName(){
   dialogUpdateName.value = true
 }
 function popDialogLevel(){
+  curSelectedLevel.value = 1;
+  curSelectedStart.value = 1;
   dialogUpdateLevel.value = true
 }
 function popDialogPhone(){
@@ -178,6 +191,34 @@ function popDialogPhone(){
     text-align: center;
     line-height: 40px;
     margin-right: -10px;
+  }
+
+  .levelItem{
+    width:130px;
+    height:40px;
+    border-radius:20px;
+    color:#666666;
+    background:#F1F1F1;
+    text-align:center;
+    line-height:40px;
+    border:0;
+  }
+  .levelItemActive{
+    background:#4A5BDE;
+    color:#fff;
+  }
+  .levelStart{
+    width:40px;
+    height:40px;
+    border-radius:20px;
+    color:#666666;
+    text-align:center;
+    line-height:40px;
+    border:0;
+  }
+  .levelStartActive{
+    color:#4A5BDE;
+    border:1px solid #4A5BDE;
   }
 
 </style>
