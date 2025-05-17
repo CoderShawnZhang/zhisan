@@ -1,17 +1,7 @@
 ## 项目简介
-
-vue3
-node v20
-
-pnpm install
-
-npm run dev
-
-npm run build
-
 <div align="center">
   <img alt="vue3-element-admin" width="80" height="80" src="./src/assets/logo@2x.png">
-  <h1>vue3-element-admin</h1>
+  <h1>SeerTeach</h1>
 
   <img src="https://img.shields.io/badge/Vue-3.5.13-brightgreen.svg"/>
   <img src="https://img.shields.io/badge/Vite-6.2.2-green.svg"/>
@@ -33,7 +23,7 @@ npm run build
 
 ## 项目简介
 
-[SeerTeach](http://192.168.0.79/Web/weChat.git) 基于 Vue3、Vite、TypeScript 和 Element-Plus 搭建的前端管理后台。 
+[SeerTeach](http://192.168.0.79/Web/weChat.git) 基于 Vue3、Vite、TypeScript 和 Element-Plus 搭建的前端。 
 
 
 ## 项目特色
